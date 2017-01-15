@@ -1,0 +1,153 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Derived</title>
+
+    <link href="css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+
+    <style>
+      
+       .curve{
+       border: 7px solid red;
+       
+       border-radius: 15px;
+       }
+        
+
+    </style>
+
+</head>
+<body style="background-color:peachpuff">
+
+
+   
+        <div id="header">
+
+
+            <table id="HeaderTable">
+                <tr>
+                    <td>
+
+                        <img alt="img" src="media/image/OOppic2.jpg" width="200" height="100" />
+                    </td>
+                    <td>
+
+                        <img alt="img" src="media/image/OOppic3.jpg" width="200" height="100" />
+
+                    </td>
+                    <td>
+                        <img alt="img" src="media/image/OOppic.jpg" width="200" height="100" />
+
+                    </td>
+
+                </tr>
+
+            </table>
+    
+            <div class="dropdown">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='class.html'">Class</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='faq.html'">FAQ</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'contact.html'">Contact US</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'labs/me.html'">LABS</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'honesty.html'">Honesty</button>
+                <input style="height:35px;Width:100px" class="btn btn-primary" type="image" src="media/image/home.jpg" alt="Submit" onclick="window.location.href = 'index.html'" />
+            </div>
+
+
+        </div>
+    
+
+    <table style=" align-content:center;">
+        <tr>
+            <td>
+
+                <div id="leftSide">
+                    <br /><br />
+                    <h4>Derived Class</h4>
+                    <br /><br />
+                    Related link: <a href="http://www.cplusplus.com/doc/tutorial/inheritance/">Inheritance</a>
+                    <img alt="img" src="media/image/inherit.jpg" width="100" height="100" />
+
+                </div>
+                <div id="mainContent2" style="color:saddlebrown;width:800px">
+                    <br/><br/>
+                    <h1>
+                        Inheritance
+                    </h1>
+                    <table>
+                        <tr>
+                            <td>
+                                <img alt="img" class="curve" src="media/image/inher1.jpg" width="300" height="200" />
+                            </td>
+                            <td>
+                                <img alt="img" class="curve" src="media/image/inher3.jpg" width="300" height="200" />
+                            </td>
+                            <td>
+
+                                <img alt="img" class="curve" src="media/image/inher6.jpg" width="300" height="200" />
+                            </td>
+                        </tr>
+                    </table>
+                    <br/><br/>
+                    <p style="text-align:left;color:red;text-shadow:inherit;font-size:large">
+                        Inheritence is the rlationship between
+                        classes where <br /> one class inherits the entire structure
+                        of another class.<br />This relationship is more stronger than
+                        composition.<br />
+                    </p>
+                    <table style="width:200px;height:100px;">
+                        <tr class="tabBx">
+                            <td class="tabBx">
+                                // Student.h<br />
+                                #include &amp;lt;ostream&amp;gt;<br />
+                                const int N = 30;<br />
+                                const int M  = 13;<br />
+                                // Base Class - start<br />
+                                class Person {<br />
+                                char person[N+1];<br />
+                                public:<br />
+                                void set(const char* n);<br />
+                                void displayName(std::ostream&amp;) const;<br />
+                                };// Base Class - end<br />
+                            </td>
+                            <td class="tabBx">
+                                // Derived Class - start<br />
+                                class Student : public Person {<br />
+                                int no;<br />
+                                char grade[M+1];<br />
+                                public:<br />
+                                Student();<br />
+                                Student(int, const char*);<br />
+                                void display(std::ostream&amp;) const;<br />
+                                };// Derived Class - end<br />
+                            </td>
+                        </tr>
+                    </table>
+                    <h2>Inheritence Video!</h2>
+
+                    <video controls="controls" width="500" height="400">
+                        <source src="media/Videos/Object-Oriented%20Programming.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+        <div id="footer">
+            <script>
+ var dt=new Date(document.lastModified);
+ document.write("<mark style='background-color:yellow'> This page was last modified on " +
+ dt.toLocaleString() + "</mark>");
+            </script>
+
+
+        </div>
+
+    
+</body>
+
+</html>

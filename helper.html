@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Helper Function</title>
+	<meta charset="utf-8" />
+    <link href="css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+
+    <style>
+      #bld{
+        
+    position: relative;
+    left: 50px;
+    top:10px;
+    border: 5px solid brown;
+ 
+      }
+    </style>
+
+  
+
+</head>
+<body style=" background-color:peachpuff">
+    <div>
+        <div id="header">
+
+
+            <table id="HeaderTable">
+                <tr>
+                    <td>
+
+                        <img alt="img" src="media/image/OOppic2.jpg" width="200" height="100" />
+
+
+                    </td>
+                    <td>
+
+
+                        <img alt="img" src="media/image/OOppic3.jpg" width="200" height="100" />
+
+                    </td>
+                    <td>
+                        <img alt="img" src="media/image/OOppic.jpg" width="200" height="100" />
+
+                    </td>
+
+                </tr>
+
+            </table>
+        
+            <div class="dropdown">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='class.html'">Class</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='faq.html'">FAQ</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'contact.html'">Contact US</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'labs/me.html'">LABS</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'honesty.html'">Honesty</button>
+                <input style="height:35px;Width:100px" class="btn btn-primary" type="image" src="media/image/home.jpg" alt="Submit" onclick="window.location.href = 'index.html'" />
+            </div>
+
+
+
+        </div>
+        
+        <p style="font-family:serif;position: relative;left:50px;top:5px;font-size:25px;color:red">Helper Functions</p><br />
+        <p style="position: relative;left:50px;top:0px;font-size:20px;color:darkred">
+            <b>
+                A free helper function need not to<br />
+                access to the private variable of a class<br />
+                but member function will give all the,<br />
+                information that the helper function needs.
+            </b>
+        </p><br />
+
+        <img alt="img" id="bld" src="media/image/doll1.jpg" width="400" height="300" />
+        <p style="position: relative;left:55px;top:20px;font-size:20px;color:red">
+            class Doll{<br />
+            int  Numeyes;<br />
+            char* hairClr;<br />
+            public:<br />
+            Doll();<br />
+            Doll(int);<br />
+            Doll(int,const char*);<br />
+            int getNo() const{return Numeyes;}<br />
+            const char* getHairClr() const{return hairClr;}<br />
+
+            };<br />
+            bool areIdentical(const Doll&amp;,const Doll&amp;);<br />
+
+        <p style="position: relative;left:55px;top:20px;font-size:20px;color:red">
+            //Doll.cpp<br />
+            bool areIdentical(const Doll&amp; lhs, const Doll&amp; rhs){<br />
+            return lhs.getNo() == rhs.getNo() &amp;&amp; <br />
+            strcmp(lhs.getHairClr(),rhs.getHairClr())==0;<br />
+
+            }<br />
+            <br />
+
+        </p>
+        <p style="position:absolute;right:300px;top:170px;color:darkred">
+            <b>
+                class Chocobx{<br />
+                int chlat;<br />
+                public:<br />
+                Chocobx();<br />
+                Chocobx(int);<br />
+                const Chocobx&amp; operator+=(int);<br />
+                int getNo() const {return no;}<br />
+                };<br />
+
+                bool operator==(const Chocobx&amp;, const Chocobx&amp;);<br />
+                Chocobx operator+(const Chocobx&amp;, int);<br />
+                Chocobx operator+(int, const Chocobx&amp;);<br />
+            </b>
+        </p>
+        <p style="position:absolute;right:400px;top:550px;color:darkred">
+            bool operator==(const Chocobx&amp; lhs, const Chocobx&amp; rhs){<br />
+
+            return lhs.getNo()==rhs.getNo();<br />
+            }<br />
+            Chocobx operator+=(const Chocobx&amp; chocobx, int chlat){<br />
+            Chocobx copy = chocobx;<br />
+            copy += chlat;<br />
+            return copy;<br />
+
+            }<br />
+            Chocobx operator+=(int chalt, const Chocobx&amp; chocobx){<br />
+            return chocobx + chlat;<br />
+
+            }<br />
+
+        </p>
+        <img alt="img" id="choc1" src="media/image/chocolate.jpg" />
+        <img alt="img" id="choc2" src="media/image/chocolate4.jpg" />
+        <img alt="img" id="fry1" src="media/image/fairy1.jpg" />
+        <figure>
+            <figcaption style="position:absolute;right:400px;top:830px;color:orangered">Wow! More Chocolate.</figcaption>
+            <img alt="img" id="choc3" src="media/image/chocoboy.jpg" />
+            
+        </figure>
+        </div>
+    <div id="footer">
+        
+        <script>
+ var dt=new Date(document.lastModified);
+ document.write("<mark style='background-color:yellow'> This page was last modified on " +
+ dt.toLocaleString() + "</mark>");
+        </script>
+    </div>
+
+</body>
+</html>

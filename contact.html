@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Page</title>
+    <link href="css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+            center: new google.maps.LatLng(43.7951474, -79.3496186),
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+</head>
+<body onload="getLocation();">
+    <div id="wrap">
+        <div id="header">
+            <table id="HeaderTable">
+                <tr>
+                    <td>
+
+                        <img alt="img" src="media/image/OOppic2.jpg" width="200" height="100" />
+
+
+                    </td>
+                    <td>
+
+
+                        <img alt="img" src="media/image/OOppic3.jpg" width="200" height="100" />
+
+                    </td>
+                    <td>
+                        <img alt="img" src="media/image/OOppic.jpg" width="200" height="100" />
+
+                    </td>
+
+                </tr>
+
+            </table>
+            <div class="dropdown">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='class.html'">Class</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='faq.html'">FAQ</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'labs/me.html'">LABS</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'honesty.html'">Honesty</button>
+                <input style="height:35px;Width:100px" class="btn btn-primary" type="image" src="media/image/home.jpg" alt="Submit" onclick="window.location.href = 'index.html'" />
+            </div>
+
+
+        </div>
+            
+
+
+
+
+        <div id="content">
+
+            <table>
+                <tr>
+                    <td>
+                        <h3><b>Where are we located?</b></h3>
+                        <div id="map-canvas"></div>
+
+
+                        <h4>We are conveniently located at 1750 Finch Ave E, Toronto, ON M2J 2X5 </h4>
+
+                    </td>
+
+                </tr>
+            </table>
+            <h3>
+                <b>Contact Address:</b>
+                Tamanna Sultana<br />
+                1750 Finch Ave E<br />
+                Toronto, ON M2J 2X5<br />
+                Phone no:(416) 491-5050<br />
+                Email : <a href="mailto:tsultana2@myseneca.ca?subject=Site%20related&amp;body=Dear%20Webmaster">Contact by Email</a>
+            </h3>
+
+
+
+
+
+
+        </div><br />
+
+
+
+
+        <div id="footer">
+            var dt=new Date(document.lastModified);
+            document.write("<mark style='background-color:yellow'>
+                This page was last modified on " +
+                dt.toLocaleString() + "
+            </mark>");   
+
+        </div>
+
+    </div>
+</body>
+</html>

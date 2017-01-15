@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Shallow</title>
+
+    <link href="css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+
+    <style>
+    #Deep{
+    position:absolute;
+    right:700px;
+    top:500px;
+    width:200px;
+    height:250px;
+    }
+    #shpic{
+         position:absolute;
+    right:900px;
+    top:550px;
+    width:400px;
+    height:350px;
+    }
+    #dpic{
+         position:absolute;
+    right:250px;
+    top:550px;
+    width:400px;
+    height:350px;
+        }
+
+
+    </style>
+
+</head>
+<body style="background-color:lightblue;">
+
+    <div id="wrap">
+        <div id="header">
+
+
+            <table id="HeaderTable">
+                <tr>
+                    <td>
+
+                        <img alt="img" src="media/image/OOppic2.jpg" width="200" height="100" />
+
+
+                    </td>
+                    <td>
+
+
+                        <img alt="img" src="media/image/OOppic3.jpg" width="200" height="100" />
+
+                    </td>
+                    <td>
+                        <img alt="img" src="media/image/OOppic.jpg" width="200" height="100" />
+
+                    </td>
+
+                </tr>
+
+            </table>
+      
+            <div class="dropdown">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='class.html'">Class</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='faq.html'">FAQ</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'contact.html'">Contact US</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'labs/me.html'">LABS</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'honesty.html'">Honesty</button>
+                <input style="height:35px;Width:100px" class="btn btn-primary" type="image" src="media/image/home.jpg" alt="Submit" onclick="window.location.href = 'index.html'" />
+            </div>
+
+
+        </div>
+
+
+        <div id="mainContent2">
+
+            <h1 style="color:red">
+
+                Shallow and Deep Copy!
+
+            </h1>
+            <p style="font-size:medium;color:darkolivegreen">
+                <b>
+                    Shallow copy simply copies
+                    the value of the variables<br />
+                    but for deep copy we need
+                    Dynamic memory!
+                </b>
+
+            </p>
+
+            <table>
+                <tr>
+                    <td>
+                        <img alt="img" src="media/image/well1.jpg" style="width:300px;height:200px" />
+                    </td>
+                    <td>
+                        <p style="font-family:sans-serif;color:mediumvioletred">
+                            <b>
+                                People can copy the outer <br />
+                                look of the well which is
+                            </b>
+                        </p> <p style="font-family:sans-serif ;background-color:yellow;color:deeppink">
+                            <b>
+
+                                shallow copy.<br />
+                            </b>
+
+                        </p>
+                        <p></p>
+                        <p style="font-family:sans-serif;color:mediumvioletred">
+                            <b>
+                                But the length of the well <br />
+                                differs in verious places which <br />
+                                should be measured and is called<br />
+                            </b>
+                        </p> <p style="font-family:sans-serif ;background-color:yellow;color:deeppink">
+                            <b>
+
+                                Deep copy.<br />
+                            </b>
+
+                        </p>
+                        <p></p>
+
+                    </td>
+                    <td>
+                        <img alt="img" src="media/image/well2.jpg" style="width:300px;height:200px" />
+                    </td>
+
+
+                </tr>
+
+
+            </table>
+
+
+            <br />
+            Related link: <a href="http://www.learncpp.com/cpp-tutorial/912-shallow-vs-deep-copying/">Shallow and Deep</a>
+
+        </div><br />
+        <div id="Deep">
+            <p style="font-size:large;color:brown">
+                //Sample code<br />
+                <b>
+                    Student::Student(const Student& src) {<br />
+
+                    // shallow copy<br />
+                    no = src.no;<br />
+
+                    // allocate dynamic memory for grade string<br />
+                    if (src.grade != nullptr) {<br />
+                    grade = new char[strlen(src.grade) + 1];<br />
+                    // copy data from the original resource<br />
+                    // to newly allocated resource<br />
+                    strcpy(grade, src.grade);<br />
+                    }<br />
+                    else<br />
+                    grade = nullptr;}<br />
+                </b>
+            </p>
+        </div>
+        <div id="shpic" style="height:410px;">
+            <img alt="img" src="media/image/shallo.jpg" width="300" height="300" />
+
+        </div>
+        <div id="dpic">
+
+            <img alt="img" src="media/image/deep.jpg" width="300" height="300" />
+
+        </div>
+
+
+        <div id="footer">
+            <script>
+ var dt=new Date(document.lastModified);
+ document.write("<mark style='background-color:yellow'> This page was last modified on " +
+ dt.toLocaleString() + "</mark>");
+            </script>
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

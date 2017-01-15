@@ -1,0 +1,5 @@
+AuthUserFile /home/int222_153c30/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Zenit student page"
+AuthType Basic
+require valid-user

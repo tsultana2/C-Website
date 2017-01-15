@@ -1,0 +1,135 @@
+﻿body {
+    background-color:lightblue;
+    
+}
+#wrap { 
+	width: 1024px; 
+	margin: 0 auto; 
+    height:100%;
+}
+.wrap { 
+	width: 1024px; 
+	margin: 0 auto; 
+    height:100%;
+}
+#map-canvas {
+        width: 500px;
+        height: 400px;
+            background-color: #CCC;
+      }
+
+#Content
+{
+ width: 1324px; margin: auto;  background-color:wheat;top:100px;
+ 
+}
+#leftSide { width: 192px; float: left; }
+#mainContent2 { width: 1024px; float: left; top:100px;  }
+#rightSide { width: 192px; float:right; }
+#mainContent2x { width: 1024px; float: left; top:100px;  }
+
+#header{
+              top:0px;
+               height:120px;
+                width: 1024px; 
+                
+                 margin: auto; }
+
+
+#footer {
+            text-align:center;
+            width: 1024px;
+            position:fixed;
+            bottom:0;
+            height:20px;
+        }
+
+ 
+ #HeaderTable {
+    background-color:lightslategrey;
+    border:1px groove ;
+    height:100px; 
+    width:100%;
+}
+
+.menu ul {
+     margin: 0px;
+     padding: 4px 4px 0px 0px;
+     
+    
+}
+.menu li {
+     text-align:center;
+   
+    width:100px;
+    border:2px solid white;    
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: inline;
+}
+
+.menu ul li {
+    display: table-cell;
+    
+}
+
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+.menu a:link {
+    
+    text-decoration: none;
+}
+
+#choc1{
+ position:absolute;
+ right:700px;
+ top:170px;
+ width:170px;
+ height:200px;
+ border:5px solid red;
+ }
+#choc2{
+position:absolute;
+ right:80px;
+ top:170px;
+ width:150px;
+ height:200px;
+ border:5px solid red;
+ }
+#choc3{
+position:absolute;
+ right:350px;
+ top:850px;
+ width:300px;
+ height:300px;
+ border:5px solid brown;
+
+}
+#fry1{
+
+position:absolute;
+ right:20px;
+ top:550px;
+ width:300px;
+ height:300px;
+ border:5px solid green;
+ }
+.tabBx{
+    width: 400px;
+    padding: 25px;
+    border: 10px solid blue;
+    margin: 25px;
+    font-size:medium;
+    color:crimson;
+    border-radius: 10px;
+
+}
+a:link    {color:red; background-color:transparent; text-decoration:none}
+a:visited {color:navy; background-color:transparent; text-decoration:none}
+a:hover   {color:deeppink; background-color:transparent; text-decoration:underline}
+a:active  {color:green; background-color:transparent; text-decoration:underline}
+

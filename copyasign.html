@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Copy Assignment</title>
+    <meta charset="utf-8" />
+    <link href="css/home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:lightblue;">
+    <div id="wrap">
+        <div id="header">
+
+
+            <table id="HeaderTable">
+                <tr>
+                    <td>
+
+                        <img alt="img" src="media/image/OOppic2.jpg" width="200" height="100" />
+
+
+                    </td>
+                    <td>
+
+
+                        <img alt="img" src="media/image/OOppic3.jpg" width="200" height="100" />
+
+                    </td>
+                    <td>
+                        <img alt="img" src="media/image/OOppic.jpg" width="200" height="100" />
+
+                    </td>
+
+                </tr>
+
+            </table>
+            <div class="dropdown">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='class.html'">Class</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href='faq.html'">FAQ</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'contact.html'">Contact US</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'labs/me.html'">LABS</button>
+                <button class="btn btn-primary" type="button" onclick="window.location.href = 'honesty.html'">Honesty</button>
+                <input style="height:35px;Width:100px" class="btn btn-primary" type="image" src="media/image/home.jpg" alt="Submit" onclick="window.location.href = 'index.html'" />
+            </div>
+
+        </div>
+
+
+
+        <!--<a href="index.html">index.html</a>
+
+             <a href="class.html">class.html</a>-->
+        <br />
+        <div id="mainContent2">
+
+            <table style="background-color:cornflowerblue;">
+                <tr>
+                    <td style="vertical-align:top;   width:auto;align-content:center;border:solid;">
+                        <div id="leftSide" style="width:186px; padding-left:50px; background-color:deepskyblue;  height:1100px;">
+                            <p>
+                                Copy Constuctor helps to copy a new object<br />
+                                from the source object.
+                            </p>
+                            <ul>
+
+                                <li><a href=http://en.cppreference.com/w/cpp/language/copy_constructor> Copy Constructor</a></li>
+                                <li><a href=http://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm> Overloaded Constructor</a></li>
+
+                            </ul>
+                            <p>
+                                //Copy Constructor<br />
+                                #include &lt;ostream&gt;<br />
+                                #include &lt;cstring&gt;<br />
+                                using namespace std;<br />
+                                class Car{<br />
+                                int miles;<br />
+                                int seat;<br />
+                                char *color;<br />
+                                char *name;<br />
+                                public:<br />
+                                Car();<br />
+                                Car(int,int,const char*,const *char)<br />
+                                Car(const Car&amp;);<br />
+                                ~Car();<br />
+                                }<br />
+
+                            </p>
+
+                        </div>
+                        <div id="mainContent2x" style="width:640px;padding-left:80px; background-color:aqua;height:1100px;">
+                            <table style="width:100%">
+
+                                <tr>
+                                    <td colspan="3">
+                                        
+                                            <h1>
+                                                Copy Constructor And <br />
+                                                    Assignment Operator
+                                            </h1>
+                                        
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+
+
+                                        <img alt="img" src="media/image/car.jpg" width="200" height="200" />
+                                    </td>
+                                    <td>
+                                        <img alt="img" src="media/image/car.jpg" width="200" height="200" />
+
+                                    </td>
+                                    <td>
+                                        <img alt="img" src="media/image/car.jpg" width="200" height="200" />
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        //Source<br />
+                                        Car::Car(int ml,int st,const char* clr,const *char nm)<br />
+                                        {<br />
+                                        bool valid = true;<br />
+                                        if(valid){<br />
+                                        miles = ml;<br />
+                                        seat = st;<br />
+                                        color = new char[strlen(clr)+1];<br />
+                                        strcpy(color,clr);<br />
+                                        name = new char[strlen(nm)+1];<br />
+                                        strcpy(name,nm);<br />
+                                        }<br />
+                                        else<br />
+                                        miles = 0;<br />
+                                        seat = 0;<br />
+                                        color = nullptr;<br />
+                                        name = nullptr;<br />
+
+
+                                        } <br />
+
+
+                                    </td>
+                                    <td>
+                                        //Copy<br />
+                                        Car::Car(const Car& src);<br />
+                                        {<br />
+                                        miles = src.miles;<br />
+                                        seat = src.seat;<br />
+                                        if(src.color!=nullptr){<br />
+                                        color = new char[strlen(clr)+1];<br />
+                                        strcpy(color,clr);<br />
+                                        }<br />
+                                        else <br />
+                                        color = nullptr;<br />
+                                        if(src.name!=nullptr){<br />
+                                        name = new char[strlen(src.name)+1];<br />
+                                        strcpy(name,src.name);<br />
+                                        }<br />
+                                        else<br />
+                                        name = nullptr;<br />
+
+                                        } <br />
+
+
+                                    </td>
+                                    <td>
+                                        //Assignment<br />
+                                        Car& Car::operator(const Car& src);<br />
+                                        {<br />
+                                        if(this!=&amp;src){<br />
+                                        miles = src.miles;<br />
+                                        seat = src.seat;<br />
+                                        delete [] color;
+                                        if(src.color!=nullptr){<br />
+                                        color = new char[strlen(clr)+1];<br />
+                                        strcpy(color,clr);<br />
+                                        }<br />
+                                        else <br />
+                                        color = nullptr;<br />
+                                        delete [] name;<br />
+                                        if(src.name!=nullptr){<br />
+                                        name = new char[strlen(src.name)+1];<br />
+                                        strcpy(name,src.name);<br />
+                                        }<br />
+                                        else<br />
+                                        name = nullptr;<br />
+                                        }<br />
+                                        return *this;<br />
+                                        } <br />
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td colspan="3">
+                                        <p>Copy and Assignment</p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        <img alt="img" src="media/image/miles.jpg" width="200" height="200" />
+
+                                    </td>
+                                    <td>
+                                        <img alt="img" src="media/image/insideofcar.jpg" width="200" height="200" />
+                                    </td>
+                                    <td>
+
+
+                                        <img alt="img" src="media/image/colorcar.jpg" width="200" height="200" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>miles</th>
+                                    <th>seat</th>
+                                    <th>color</th>
+                                </tr>
+
+
+                            </table>
+
+                        </div>
+                        <div id="rightSide" style="width:190px;padding-left:50px; background-color:deepskyblue;  height:1100px;">
+                            <p>&nbsp;&nbsp;&nbsp;Assignment Operator</p>
+                            <p>
+                                Assignment operator puts logic<br />
+                                to copy data from exixting object<br />
+                                to another object.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <a href="https://en.wikipedia.org/wiki/Assignment_operator_(C%2B%2B)">
+                                        Assignment Operator<br />
+                                        information
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://en.cppreference.com/w/cpp/language/as_operator">
+                                        Assignment Operator<br />
+                                        more example
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <div id="footer">
+            <script>
+ var dt=new Date(document.lastModified);
+ document.write("<mark style='background-color:yellow'> This page was last modified on " +
+ dt.toLocaleString() + "</mark>");
+            </script>
+
+        </div>
+    </div>
+
+</body>
+</html>
